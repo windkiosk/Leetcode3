@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * https://leetcode.com/problems/largest-rectangle-in-histogram/
  */
-public class LargestRectangleArea {
+public class P84_LargestRectangleArea {
 
   public static void main(String[] args) {
     int[] height = new int[]{2,1,5,6,2,3};
