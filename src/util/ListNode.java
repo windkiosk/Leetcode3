@@ -1,4 +1,4 @@
-package util.data;
+package util;
 
 public class ListNode {
     public int val;
