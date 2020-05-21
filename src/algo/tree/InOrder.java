@@ -4,46 +4,42 @@ import java.util.Stack;
 import util.TreeNode;
 import util.TreeNodePrinter;
 
-public class PreOrder {
+public class InOrder {
 
   public static void main(String[] args) {
     TreeNode treeNode = TreeNode.SAMPLE_0;
     TreeNodePrinter.printNode(treeNode);
 
-    PreOrder preOrder = new PreOrder();
-    preOrder.preOrder(treeNode);
+    InOrder inOrder = new InOrder();
+    inOrder.inOrder(treeNode);
     System.out.println("---");
-    preOrder.preOrderRecur(treeNode);
+    inOrder.inOrderRecur(treeNode);
   }
 
-  void preOrder(TreeNode root) {
-    if (root == null) {
-      return;
-    }
-
-    System.out.println(root.val);
-
-    preOrder(root.left);
-    preOrder(root.right);
-  }
-
-  void preOrderRecur(TreeNode root) {
+  void inOrder(TreeNode root) {
     if (root == null) return;
 
-    TreeNode node = root;
+    inOrder(root.left);
+    System.out.println(root.val);
+    inOrder(root.right);
+  }
+
+  void inOrderRecur(TreeNode root) {
+    if (root == null) return;
+
     Stack<TreeNode> stack = new Stack<>();
+    TreeNode node = root;
     while (node != null) {
-      System.out.println(node.val);
       stack.push(node);
       node = node.left;
     }
 
     while (!stack.isEmpty()) {
       node = stack.pop();
+      System.out.println(node.val);
       if (node.right != null) {
         node = node.right;
         while (node != null) {
-          System.out.println(node.val);
           stack.push(node);
           node = node.left;
         }
