@@ -12,15 +12,12 @@ public class P206_ReverseLinkedList {
 
   public ListNode reverseList(ListNode head) {
     ListNode last = null;
-    ListNode curr = head;
-
-    while (curr != null) {
-      ListNode tmp = curr.next;
-      curr.next = last;
-      last = curr;
-      curr = tmp;
+    while (head != null) {
+      ListNode tmp = head.next;
+      head.next = last;
+      last = head;
+      head = tmp;
     }
-
     return last;
   }
 }
