@@ -6,8 +6,8 @@ public class P25_ReverseKGroup {
 
   public static void main(String[] args) {
     ListNode head = ListNode.fromString("1->2");
-    P25_ReverseKGroup p25_reverseKGroup = new P25_ReverseKGroup();
-    System.out.println(p25_reverseKGroup.reverseKGroup(head, 2));
+    P25_ReverseKGroup solution = new P25_ReverseKGroup();
+    System.out.println(solution.reverseKGroup(head, 2));
   }
 
   public ListNode reverseKGroup(ListNode head, int k) {

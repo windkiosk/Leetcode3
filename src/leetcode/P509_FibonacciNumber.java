@@ -3,8 +3,8 @@ package leetcode;
 public class P509_FibonacciNumber {
 
   public static void main(String[] args) {
-    P509_FibonacciNumber p509_fibonacciNumber = new P509_FibonacciNumber();
-    System.out.println(p509_fibonacciNumber.fibIterative(5));
+    P509_FibonacciNumber solution = new P509_FibonacciNumber();
+    System.out.println(solution.fibIterative(5));
   }
 
   int fib(int n) {

@@ -3,9 +3,9 @@ package leetcode;
 public class P31_NextPermutation {
 
   public static void main(String[] args) {
-    P31_NextPermutation nextPermutation = new P31_NextPermutation();
+    P31_NextPermutation solution = new P31_NextPermutation();
     int[] nums = new int[]{1, 1};
-    nextPermutation.nextPermutation(nums);
+    solution.nextPermutation(nums);
     System.out.println(nums);
   }
 

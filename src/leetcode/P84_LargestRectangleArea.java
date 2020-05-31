@@ -9,13 +9,14 @@ public class P84_LargestRectangleArea {
 
   public static void main(String[] args) {
     int[] height = new int[]{2,1,5,6,2,3};
+    P84_LargestRectangleArea solution = new P84_LargestRectangleArea();
     // System.out.println(largestRectangleArea(height));
-    System.out.println(findByDp(height));
+    System.out.println(solution.findByDp(height));
   }
 
   // The main function to find the maximum rectangular area under given
   // histogram with n bars
-  public static int largestRectangleArea(int hist[]) {
+  public int largestRectangleArea(int hist[]) {
     // Create an empty stack. The stack holds indexes of hist[] array
     // The bars stored in stack are always in increasing order of their
     // heights.
@@ -60,7 +61,7 @@ public class P84_LargestRectangleArea {
     return max_area;
   }
 
-  public static int findByDp(int heights[]) {
+  int findByDp(int heights[]) {
     if (heights == null || heights.length == 0) {
       return 0;
     }
