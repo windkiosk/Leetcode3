@@ -19,11 +19,10 @@ public class P653_TwoSumIV {
       return false;
     }
 
-    int val = root.val;
-    if (set.contains(k - val)) {
+    if (set.contains(k - root.val)) {
       return true;
     } else {
-      set.add(val);
+      set.add(root.val);
     }
 
     return findTarget(root.left, k) || findTarget(root.right, k);
